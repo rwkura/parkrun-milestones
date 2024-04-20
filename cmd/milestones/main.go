@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	parkrun "github.com/flopp/parkrun-milestones/internal/parkrun"
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/jedib0t/go-pretty/v6/text"
+	parkrun "github.com/rwkura/parkrun-milestones/internal/parkrun"
 )
 
 func formatMilestone(number int64) string {

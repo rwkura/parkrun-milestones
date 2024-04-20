@@ -6,8 +6,8 @@ import (
 	"path"
 	"time"
 
-	download "github.com/flopp/parkrun-milestones/internal/download"
-	file "github.com/flopp/parkrun-milestones/internal/file"
+	download "github.com/rwkura/parkrun-milestones/internal/download"
+	file "github.com/rwkura/parkrun-milestones/internal/file"
 )
 
 var MaxFileAge time.Duration = 24 * time.Hour

@@ -1,4 +1,4 @@
-module github.com/flopp/parkrun-milestones
+module github.com/rwkura/parkrun-milestones
 
 go 1.18
 

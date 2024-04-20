@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	parkrun "github.com/flopp/parkrun-milestones/internal/parkrun"
+	parkrun "github.com/rwkura/parkrun-milestones/internal/parkrun"
 )
 
 const (

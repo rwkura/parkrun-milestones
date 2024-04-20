@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	parkrun "github.com/flopp/parkrun-milestones/internal/parkrun"
 	"github.com/jedib0t/go-pretty/v6/table"
+	parkrun "github.com/rwkura/parkrun-milestones/internal/parkrun"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"time"
 
-	file "github.com/flopp/parkrun-milestones/internal/file"
+	file "github.com/rwkura/parkrun-milestones/internal/file"
 )
 
 func AlwaysDownload(url string, filePath string) error {

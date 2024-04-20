@@ -1,12 +1,16 @@
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/flopp/go-staticmaps)](https://pkg.go.dev/github.com/flopp/parkrun-milestones)
-[![Go Report Card](https://goreportcard.com/badge/github.com/flopp/parkrun-milestones)](https://goreportcard.com/report/flopp/parkrun-milestones)
-[![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/flopp/parkrun-milestones/)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/rwkura/go-staticmaps)](https://pkg.go.dev/github.com/rwkura/parkrun-milestones)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rwkura/parkrun-milestones)](https://goreportcard.com/report/flopp/parkrun-milestones)
+[![License MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/rwkura/parkrun-milestones/)
 
 # parkrun-milestones
 
 Try to determine milestone candidates to the next run at a parkrun event.
 
 ## Commands
+
+### Building the app
+
+For Mac/Linux: `$ make build`
 
 ### parkrun-events
 
@@ -70,21 +74,21 @@ Prints the stats of the latest run in list format; suitable for sharing in text-
 
 Example:
 
+Unbuilt: `go run ./cmd/runstats -fancy stpeters`
+
+Built: `./parkrun-runstats -fancy stpeters`
+
 ```
-$ ./parkrun-runstats -fancy bushy
-Bushy parkrun
-#️⃣ 902
-📅 2022-11-12
-🏃 Runners: 1154
-  ⏱ new PB: 108
-  🧳 first visitors: 111
-  ⭐️ new parkrunners: 37
-  🏆 25. run anniversary: 7
-  🏆 50. run anniversary: 6
-  🏆 100. run anniversary: 3
-🦺 Volunteers: 69
-  ⭐️ new volunteers: 6
-  🏆 25. vol. anniversary: 1
-  🏆 100. vol. anniversary: 1
-👀 https://www.parkrun.org.uk/bushy/results/902/
+St Peters parkrun #️⃣ 568
+📅 20.04.2024
+⛅ Weather:
+🏃 parkrunners: 568
+⏱️ New PBs: 78
+🌍 Visitors: 65
+⭐️ First-time parkrunners: 45
+🦺 Volunteers: 24
+⭐️ First-time volunteers: 6
+🏆 Milestones: 4xR25, 4xR50, 1xR100
+
+https://www.parkrun.com.au/stpeters/results/568/
 ```

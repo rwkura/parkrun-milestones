@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	parkrun "github.com/flopp/parkrun-milestones/internal/parkrun"
+	parkrun "github.com/rwkura/parkrun-milestones/internal/parkrun"
 )
 
 const (
@@ -106,14 +106,14 @@ func pi2(n int, icon string, text string) {
 func printFancy(event *parkrun.Event, run *parkrun.Run, r500, r250, r100, r50, r25, r1, pb, firstEvent, v500, v250, v100, v50, v25, v1 int) {
 	fmt.Printf("%s #️⃣ %d\n", event.Name, int(run.Index))
 	ps(run.Time.Format("02.01.2006"), "📅", "")
-	ps("", "⛅", "Wetter / weather")
-	ps("", "🎁", "Special")
-	pi(len(run.Runners), "🏃", "Teilnehmer / runners")
-	pi(pb, "⏱️", "Neue Bestzeiten / new PB")
-	pi(firstEvent, "🌍", "Besucher / visitors")
-	pi(r1, "⭐️", "Neue Teilnehmer / first-time runners")
-	pi(len(run.Volunteers), "🦺", "Helfende / volunteers")
-	pi(v1, "⭐️", "Neue Helfende / first-time volunteers")
+	ps("", "⛅", "Weather")
+	// ps("", "🎁", "Special")
+	pi(len(run.Runners), "🏃", "parkrunners")
+	pi(pb, "⏱️", "New PBs")
+	pi(firstEvent, "🌍", "Visitors")
+	pi(r1, "⭐️", "First-time parkrunners")
+	pi(len(run.Volunteers), "🦺", "Volunteers")
+	pi(v1, "⭐️", "First-time volunteers")
 	if (r25 + r50 + r100 + r250 + r500 + v25 + v50 + v100 + v250 + v500) > 0 {
 		m := make([]string, 0)
 		if r25 > 0 {
@@ -149,7 +149,7 @@ func printFancy(event *parkrun.Event, run *parkrun.Run, r500, r250, r100, r50, r
 		ps(strings.Join(m, ", "), "🏆", "Milestones")
 	}
 	fmt.Printf("\nhttps://%s/%s/results/%d/\n", event.CountryUrl, event.Id, run.Index)
-	fmt.Println("#parkrun #running #laufen #mastodonlauftreff")
+	// fmt.Println("#parkrun #loveparkrun")
 }
 
 func fmtAgeGroup(ageGroup string) string {

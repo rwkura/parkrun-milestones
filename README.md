@@ -6,11 +6,18 @@
 
 Try to determine milestone candidates to the next run at a parkrun event.
 
+## Dependencies
+
+The Go Programming Language https://go.dev/dl/
+
+## Building the app
+
+`$ make build`
+
+Note: Windows will require GNU Make installed in order to run the makefile https://community.chocolatey.org/packages/make
+
+
 ## Commands
-
-### Building the app
-
-For Mac/Linux: `$ make build`
 
 ### parkrun-events
 
@@ -18,8 +25,13 @@ You can use this command to search for events (e.g. in order to find out the id 
 
 Example:
 
-```
+**Unbuilt**: `$ go run ./cmd/events east`
+
+**Built**: `$ ./parkrun-events east`
+
 $ ./parkrun-events east 
+
+```
 ┌────────────────────┬────────────────────────────────┬────────────────┐
 │ EVENT ID           │ EVENT NAME                     │ COUNTRY        │
 ├────────────────────┼────────────────────────────────┼────────────────┤
@@ -49,8 +61,13 @@ A milestone candidate is a runner or volunteer, who will probably have a milesto
 
 Example:
 
+**Unbuilt**: `$ go run ./cmd/milestones stpeters`
+
+**Built**: `$ ./parkrun-milestones stpeters`
+
+To force a refresh of data, use the `-force` flag e.g. `go run ./cmd/milestones -force stpeters`
+
 ```
-$ ./parkrun-milestones eastville
 ┌───────────────────────────────────────────────────────┐
 │ Expected Milestones at                                │
 │ Eastville parkrun                                     │
@@ -74,9 +91,11 @@ Prints the stats of the latest run in list format; suitable for sharing in text-
 
 Example:
 
-Unbuilt: `go run ./cmd/runstats -fancy stpeters`
+**Unbuilt**: `$ go run ./cmd/runstats -fancy stpeters`
 
-Built: `./parkrun-runstats -fancy stpeters`
+**Built**: `$ ./parkrun-runstats -fancy stpeters`
+
+To force a refresh of data, use the `-force` flag e.g. `$ go run ./cmd/runstats -force -fancy stpeters`
 
 ```
 St Peters parkrun #️⃣ 568

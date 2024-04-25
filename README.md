@@ -10,7 +10,7 @@ Try to determine milestone candidates to the next run at a parkrun event.
 
 The Go Programming Language https://go.dev/dl/
 
-## Building the app
+## Building the app (Optional - you can run the scripts without building)
 
 `$ make build`
 
